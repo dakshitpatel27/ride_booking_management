@@ -1,1 +1,5 @@
 Ride Booking Management System
+Driver Management
+Vehicle Management
+Ride Booking
+Payment

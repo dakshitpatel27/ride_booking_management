@@ -137,13 +137,19 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Ride Booking": {
+        "before_save": "ride_booking_management.vehicle_status.check_vehicle_availability",
+        "on_update": "ride_booking_management.vehicle_status.reserve_vehicle",
+        "on_submit": [
+            "ride_booking_management.vehicle_status.release_vehicle",
+            "ride_booking_management.events.send_ride_completion_email"
+        ],
+    },
+    "Payment": {
+        "on_update": "ride_booking_management.events.update_payment_status"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

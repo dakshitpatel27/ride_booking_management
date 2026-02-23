@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{assigned_driver} -{#####}",
+ "creation": "2026-02-20 11:42:38.305344",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zfn1",
+  "customer_name",
+  "customer_email",
+  "select_location_on_map_section",
+  "pickup_location",
+  "column_break_ehiz",
+  "drop_location",
+  "fill_details_section",
+  "booking_date",
+  "assigned_driver",
+  "vehicle",
+  "distance",
+  "fare_amount",
+  "status",
+  "payment_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zfn1",
+   "fieldtype": "Section Break",
+   "label": "Ride Details"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pickup_location",
+   "fieldtype": "Geolocation",
+   "label": "Pickup Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drop_location",
+   "fieldtype": "Geolocation",
+   "label": "Drop Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "label": "Booking Date "
+  },
+  {
+   "fieldname": "assigned_driver",
+   "fieldtype": "Link",
+   "label": "Assigned Driver",
+   "options": "Driverr"
+  },
+  {
+   "fetch_from": "assigned_driver.assigned_vehicle",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehiclee"
+  },
+  {
+   "fieldname": "distance",
+   "fieldtype": "Float",
+   "label": "Distance"
+  },
+  {
+   "fieldname": "fare_amount",
+   "fieldtype": "Currency",
+   "label": "Fare Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ehiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_location_on_map_section",
+   "fieldtype": "Section Break",
+   "label": "Select Location On Map"
+  },
+  {
+   "fieldname": "fill_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fill Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-23 17:22:39.117843",
+ "modified_by": "Administrator",
+ "module": "Ride Booking",
+ "name": "Ride Booking",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

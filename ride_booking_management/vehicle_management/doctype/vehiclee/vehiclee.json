@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{vehicle_number} {vehicle_type}",
+ "creation": "2026-02-20 11:41:10.780408",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_9qxf",
+  "vehicle_number",
+  "vehicle_type",
+  "model",
+  "registration_expiry",
+  "assigned_driver",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_9qxf",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "Mini\nSedan\nSUV"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "registration_expiry",
+   "fieldtype": "Date",
+   "label": "Registration Expiry"
+  },
+  {
+   "fieldname": "assigned_driver",
+   "fieldtype": "Link",
+   "label": "Assigned Driver",
+   "options": "Driverr"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nIn Service\nMaintenance"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-20 12:17:28.850338",
+ "modified_by": "Administrator",
+ "module": "Vehicle Management",
+ "name": "Vehiclee",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
