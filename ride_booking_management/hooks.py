@@ -16,8 +16,8 @@ app_license = "mit"
 # 		"name": "ride_booking_management",
 # 		"logo": "/assets/ride_booking_management/logo.png",
 # 		"title": "Ride Booking Management System",
-# 		"route": "/ride_booking_management",
-# 		"has_permission": "ride_booking_management.api.permission.has_app_permission"
+# 		"route": "/app/ride-booking-management",
+#       "has_permission": "ride_booking_management.api.permission.has_app_permission"
 # 	}
 # ]
 

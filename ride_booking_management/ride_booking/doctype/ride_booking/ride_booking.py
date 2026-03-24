@@ -28,30 +28,3 @@ class RideBooking(Document):
             driver = frappe.get_doc("Driverr", self.assigned_driver)
             if driver.status != "Active":
                 frappe.throw("Driver not active")
-
-    def get_pickup_display(self):
-        lat, lng = get_coordinates(self.pickup_location)
-        if lat and lng:
-            return f"{lat}, {lng}"
-        return ""
-
-    def get_drop_display(self):
-        lat, lng = get_coordinates(self.drop_location)
-        if lat and lng:
-            return f"{lat}, {lng}"
-        return ""
-
-
-
-
-def get_coordinates(geo_json):
-    if not geo_json:
-        return None, None
-
-    data = json.loads(geo_json)
-    coords = data["features"][0]["geometry"]["coordinates"]
-
-    lng = coords[0]
-    lat = coords[1]
-
-    return lat, lng

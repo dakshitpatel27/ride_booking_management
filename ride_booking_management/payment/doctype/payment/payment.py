@@ -5,13 +5,13 @@ import frappe
 from frappe.model.document import Document
 
 class Payment(Document):
-	def validate(self):
-		completed = frappe.db.exists("Payment", {
-			"ride_booking": self.ride_booking,
-			"status": "Completed",
-			"name": ["!=", self.name]
-		})
-		if completed:
-			frappe.throw("Payment already completed")
-
+	# def validate(self):
+	# 	completed = frappe.db.exists("Payment", {
+	# 		"ride_booking": self.ride_booking,
+	# 		"status": "Completed",
+	# 		"name": ["!=", self.name]
+	# 	})
+	# 	if completed:
+	# 		frappe.throw("Payment already completed")
+	pass
 
